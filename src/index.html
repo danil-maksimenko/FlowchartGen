@@ -1,13 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>Flowchart Generator</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <center>
-      <input type="text" placeholder="Enter a canonical file path" id="input" name="file_name">
-      <br/>
-      <button id="genbutton">Generate</button>
-    </center>
+  <body class="body">
+    <form
+      class="body__form"
+      action="upload.php" 
+      method="POST"
+    >
+      <input
+        class="form__input"
+        type="file" 
+        multiple
+      >
+      <p class="form__text">
+        Drag your files here or click in this area.
+      </p>
+      <button 
+        class="form__button" 
+        type="submit"
+      >
+        Upload
+      </button>
+    </form>
   </body>
 </html>
