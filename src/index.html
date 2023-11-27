@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <title>Flowchart Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
   </head>
   <body class="body">
     <form
       class="body__form"
-      action="upload.php" 
-      method="POST"
     >
-      <input
+      <input 
         class="form__input"
-        type="file" 
-        multiple
+        type="text" 
+        placeholder="Enter a canonical file path" 
+        id="input" 
+        name="file_name"
       >
-      <p class="form__text">
-        Drag your files here or click in this area.
-      </p>
       <button 
-        class="form__button" 
-        type="submit"
+        class="form__button"
+        id="genbutton"
       >
-        Upload
+        Generate
       </button>
     </form>
-  </body>
+    </body>
 </html>
