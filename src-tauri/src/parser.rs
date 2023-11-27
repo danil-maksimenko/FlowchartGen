@@ -1,18 +1,10 @@
 use std::path::PathBuf;
 
-use crate::{ast::Ast, to_usize, error::{ParseError, CodeError}, flowchart::{Flowchart, FlowchartStr}};
+use crate::{ast::Ast, to_usize, error::{ParseError, CodeError}};
 
 use clang::{
     Clang, Entity, EntityKind, Index, TranslationUnit,
 };
-
-pub fn to_flowchart_str<'a>(ast_vector: Vec<Ast>) -> FlowchartStr {
-    let flowchart = Flowchart::default();
-    for ast in ast_vector {
-    }
-
-    todo!()
-}
 
 #[tauri::command]
 pub fn parse_cpp_file(file_name: PathBuf) -> Result<Vec<Ast>, ParseError> {
